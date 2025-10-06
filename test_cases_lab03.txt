@@ -1,0 +1,30 @@
+LAB 03 - LOGIN TESTING USING SELENIUM
+
+DANH SÁCH 6 TEST CASE
+
+*Test Case 1: Đăng nhập thành công
+- Dữ liệu: Username = demo@site.com, Password = Demo@123
+- Bước thực hiện: Mở login.html → nhập user/pass hợp lệ → nhấn LOGIN
+- Kết quả mong đợi: Chuyển sang dashboard.html
+
+*Test Case 2: Sai mật khẩu
+- Dữ liệu: Username = demo@site.com, Password = sai123
+- Bước thực hiện: Mở login.html → nhập sai mật khẩu → nhấn LOGIN
+- Kết quả mong đợi: Hiển thị thông báo “Sai tài khoản hoặc mật khẩu”
+
+*Test Case 3: Bỏ trống ô nhập
+- Dữ liệu: Username trống, Password trống
+- Bước thực hiện: Mở login.html → bấm LOGIN
+- Kết quả mong đợi: Hiển thị thông báo “Vui lòng nhập đầy đủ (required)”
+
+*Test Case 4: Forgot Password
+- Bước thực hiện: Mở login.html → click “Forgot password?”
+- Kết quả mong đợi: Mở trang forgot.html
+
+*Test Case 5: SIGN UP
+- Bước thực hiện: Mở login.html → click “SIGN UP”
+- Kết quả mong đợi: Mở trang signup.html
+
+*Test Case 6: Nút mạng xã hội
+- Bước thực hiện: Mở login.html → đếm số nút .circle
+- Kết quả mong đợi: Có 3 nút mạng xã hội (Facebook, Twitter, Google hoặc ký tự F/T/G)

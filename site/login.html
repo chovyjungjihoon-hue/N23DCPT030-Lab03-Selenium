@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",system-ui,Arial}
+    body{min-height:100vh;display:flex;align-items:center;justify-content:center;
+         background:linear-gradient(135deg,#6f00ff 0%,#00c9ff 100%);padding:24px;}
+    .card{width:380px;background:#fff;border-radius:16px;padding:40px 48px;
+          box-shadow:0 12px 28px rgba(0,0,0,.18);text-align:center;}
+    h1{font-size:28px;color:#333;margin-bottom:24px;font-weight:700}
+    label{display:block;text-align:left;color:#444;font-weight:500;margin:12px 0 6px}
+    .input{width:100%;border:none;border-bottom:2px solid #d6d6d6;padding:12px 2px;
+           font-size:14px;outline:none;background:transparent}
+    .input:focus{border-bottom-color:#6f00ff}
+    .row-right{display:flex;justify-content:flex-end;margin-top:8px;margin-bottom:22px}
+    .link{color:#777;text-decoration:none;font-size:13px}.link:hover{color:#6f00ff}
+    .btn{width:100%;border:none;color:#fff;font-weight:700;letter-spacing:.4px;
+         padding:12px 16px;border-radius:26px;cursor:pointer;font-size:15px;
+         background:linear-gradient(135deg,#6f00ff,#00c9ff);transition:opacity .2s ease;margin-top:6px}
+    .btn:hover{opacity:.9}
+    .msg{min-height:18px;color:#d40000;font-size:13px;margin-top:8px}
+    .muted{color:#8a8a8a;font-size:14px;margin:20px 0 10px}
+    .socials{display:flex;justify-content:center;gap:14px;margin-bottom:18px}
+    .circle{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+            background:#fff;border:2px solid #d6d6d6;font-size:18px;color:#555;cursor:pointer;transition:all .2s}
+    .circle:hover{border-color:#6f00ff;color:#6f00ff}
+    .signup a{color:#6f00ff;text-decoration:none;font-weight:600}
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Login</h1>
+    <label>Username</label>
+    <input id="username" class="input" type="text" placeholder="Type your username">
+    <label>Password</label>
+    <input id="password" class="input" type="password" placeholder="Type your password">
+    <div class="row-right"><a class="link" href="forgot.html">Forgot password?</a></div>
+    <button id="submit" class="btn">LOGIN</button>
+    <div id="msg" class="msg"></div>
+    <div class="muted">Or Sign Up Using</div>
+    <div class="socials">
+      <button class="circle" data-social="facebook"><i class="fab fa-facebook-f"></i></button>
+      <button class="circle" data-social="twitter"><i class="fab fa-twitter"></i></button>
+      <button class="circle" data-social="google"><i class="fab fa-google"></i></button>
+    </div>
+    <div class="muted">Or Sign Up Using</div>
+    <div class="signup"><a href="signup.html">SIGN UP</a></div>
+  </div>
+  <script>
+    const submit = document.getElementById('submit');
+    submit.addEventListener('click', () => {
+      const u = document.getElementById('username').value.trim();
+      const p = document.getElementById('password').value.trim();
+      const msg = document.getElementById('msg');
+      if (!u || !p){ msg.textContent = 'Vui lòng nhập đầy đủ (required)'; return; }
+      if (u === 'demo@site.com' && p === 'Demo@123'){
+        location.href = 'dashboard.html';
+      } else {
+        msg.textContent = 'Sai tài khoản hoặc mật khẩu';
+      }
+    });
+  </script>
+</body>
+</html>
