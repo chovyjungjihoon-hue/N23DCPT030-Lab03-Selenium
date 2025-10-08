@@ -1,57 +1,56 @@
 # LAB 03 – LOGIN TESTING USING SELENIUM
+Thực hiện kiểm thử tự động (Automation Testing) chức năng Đăng nhập (Login) bằng Python + Selenium + Pytest.
+## Giới thiệu dự án
 
-## Mục tiêu
-Thực hiện kiểm thử tự động (Automation Testing) chức năng **Đăng nhập (Login)** bằng **Python + Selenium + Pytest**.  
-Thực hiện: **6 test case**, **locator gọn & chính xác**, **ảnh chụp kết quả**, **README hướng dẫn test case**.
+Mục tiêu dự án: Thực hiện **6 test case**, **locator gọn & chính xác**, **ảnh chụp kết quả**, **README hướng dẫn test case**.
 
 ---
 
 
 ## 1. Thiết kế sơ đồ Use Case
-*
-![Use Case](PICTURES/USECASE.png)
----
 
-## Quy trình TEST CASE
-**Chuẩn bị môi trường**
+![Use Case](PICTURES/USECASE.png)
+
+## 2. Quy trình Test Case
+**I. Chuẩn bị môi trường**
 
 - Bước 1: Cài Python 3.x 
 
-- Mở CMD tại thư mục dự án:
+- Bước 2: Mở CMD tại thư mục dự án:
 
 cd /d E:\lab03-selenium
 -->python -m venv .venv
 -->.venv\Scripts\activate
 -->pip install selenium webdriver-manager pytest
 
-**Khởi chạy test**
-- Khởi chạy web server cục bộ
+**II. Khởi chạy Test**
+- Bước 3: Khởi chạy web server cục bộ
 
-- Mở một CMD khác (giữ cửa sổ này mở suốt lúc test):
+- Bước 4: Mở một CMD khác (giữ cửa sổ này mở suốt lúc test):
 
 -->cd /d E:\lab03-selenium
 -->python -m http.server 8000
 ![TEST](PICTURES/test1.png)
 
-- Kiểm tra trang chạy: mở trình duyệt vào http://localhost:8000/site/login.html.
+- Bước 5: Kiểm tra trang chạy: mở trình duyệt vào http://localhost:8000/site/login.html.
 ![TEST](PICTURES/test2.png)
-- Chạy bộ test Selenium (6 test case)
+- Bước 6: Chạy bộ test Selenium (6 test case)
 -->cd /d E:\lab03-selenium
 -->.venv\Scripts\activate
 -->pytest -q
 
 
-- **Kết quả test:**
-[TEST](PICTURES/login_success.png)
-[TEST](PICTURES/signup_link.png)
-[TEST](PICTURES/social_buttons.png)
-[TEST](PICTURES/wrong_password.png)
-[TEST](PICTURES/empty_fields.png)
-[TEST](PICTURES/empty_fields.png)
+**III. KẾT QUẢ TEST:**
+![TEST](PICTURES/login_success.png)
+![TEST](PICTURES/signup_link.png)
+![TEST](PICTURES/social_buttons.png)
+![TEST](PICTURES/wrong_password.png)
+![TEST](PICTURES/empty_fields.png)
+![TEST](PICTURES/empty_fields.png)
 - Quay về cửa sổ CMD có (venv):
 ......
 *6 passed in XXs*
-[TEST](PICTURES/ketqua.png)
+![TEST](PICTURES/ketqua.png)
 
 
 
