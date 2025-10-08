@@ -2,46 +2,20 @@
 
 ## Mục tiêu
 Thực hiện kiểm thử tự động (Automation Testing) chức năng **Đăng nhập (Login)** bằng **Python + Selenium + Pytest**.  
-Yêu cầu: **6 test case chạy được**, **locator gọn & chính xác**, **ảnh chụp kết quả**, **README hướng dẫn**.
+Thực hiện: **6 test case**, **locator gọn & chính xác**, **ảnh chụp kết quả**, **README hướng dẫn test case**.
 
 ---
 
-## 📂 Cấu trúc thư mục
-```
-lab03-selenium/
-├─ site/
-│  ├─ login.html
-│  ├─ forgot.html
-│  ├─ signup.html
-│  └─ dashboard.html
-├─ tests/
-│  └─ test_login.py
-├─ screenshots/
-│  ├─ login_success.png
-│  ├─ wrong_password.png
-│  ├─ empty_fields.png
-│  ├─ forgot_password.png
-│  ├─ signup_link.png
-│  └─ social_buttons.png
-│  └─ ketqua.png
-|─ README.md
-└─ test_cases_lab03.txt
-```
 
-
-```
-.venv/
-.pytest_cache/
-__pycache__/
-*.pyc
-```
-
+## 1. Thiết kế sơ đồ Use Case
+*
+![Use Case](PICTURES/USECASE.png)
 ---
 
-## Các bước thực hiện test
-**1. Chuẩn bị môi trường**
+## Quy trình TEST CASE
+**Chuẩn bị môi trường**
 
-- Cài Python 3.x (tick “Add Python to PATH”).
+- Bước 1: Cài Python 3.x 
 
 - Mở CMD tại thư mục dự án:
 
@@ -50,34 +24,38 @@ cd /d E:\lab03-selenium
 -->.venv\Scripts\activate
 -->pip install selenium webdriver-manager pytest
 
-
+**Khởi chạy test**
 - Khởi chạy web server cục bộ
 
 - Mở một CMD khác (giữ cửa sổ này mở suốt lúc test):
 
 -->cd /d E:\lab03-selenium
 -->python -m http.server 8000
-
+![TEST](PICTURES/test1.png)
 
 - Kiểm tra trang chạy: mở trình duyệt vào http://localhost:8000/site/login.html.
-
+![TEST](PICTURES/test2.png)
 - Chạy bộ test Selenium (6 test case)
-
-- Quay về cửa sổ CMD có (venv):
-
 -->cd /d E:\lab03-selenium
 -->.venv\Scripts\activate
 -->pytest -q
 
 
-- **Kết quả mong đợi:**
-
+- **Kết quả test:**
+[TEST](PICTURES/login_success.png)
+[TEST](PICTURES/signup_link.png)
+[TEST](PICTURES/social_buttons.png)
+[TEST](PICTURES/wrong_password.png)
+[TEST](PICTURES/empty_fields.png)
+[TEST](PICTURES/empty_fields.png)
+- Quay về cửa sổ CMD có (venv):
 ......
 *6 passed in XXs*
+[TEST](PICTURES/ketqua.png)
 
 
 
-## 🔎 Locator sử dụng
+## Locator sử dụng
 - Username: `By.ID, "username"`  
 - Password: `By.ID, "password"`  
 - Nút LOGIN: `By.ID, "submit"`  
