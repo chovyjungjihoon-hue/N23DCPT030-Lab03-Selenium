@@ -9,7 +9,7 @@ Mục tiêu dự án: Thực hiện **6 test case**, **locator gọn & chính x�
 
 ## 1. Thiết kế sơ đồ Use Case
 
-![Use Case](PICTURES/USECASE.png)
+![Use Case](PICTURES/USECASE1.png)
 
 ## 2. Quy trình Test Case
 **I. Chuẩn bị môi trường**
